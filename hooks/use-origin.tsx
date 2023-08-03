@@ -6,7 +6,7 @@ export const useOrigin = () => {
 
     useEffect(() => {
         setMounted(true);
-    },[])
+    },[]);
 
     if(!mounted) {
         return '';
