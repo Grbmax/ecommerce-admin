@@ -13,8 +13,6 @@ const DashboardPage: React.FC<DashboardPage> = async ({ params }) => {
         }
     });
 
-    console.log("Name :", store?.name)
-
     return (
         <div>
             Active Store : {store?.name}

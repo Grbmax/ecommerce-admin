@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Store } from "@prisma/client";
 import { useParams, useRouter } from "next/navigation";
 import { Check, ChevronsUpDown, PlusCircle, Store as StoreIcon } from "lucide-react";
@@ -41,6 +41,9 @@ export default function StoreSwitcher({
         router.push(`/${store.value}`);
     }
 
+    useEffect(() =>{
+        setOpen(false)
+    },[]);
 
 
     return (

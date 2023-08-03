@@ -14,6 +14,13 @@ export function MainNav({
     const params = useParams();
     
     const routes = [
+        
+        {
+            href: `/${params.storeId}`,
+            label: 'Home',
+            active: pathname === `/${params.storeId}`,
+        },
+
         {
             href: `/${params.storeId}/settings`,
             label: 'Settings',
@@ -27,6 +34,7 @@ export function MainNav({
         >
             {routes.map((route) => (
                 <Link
+                rel="preload"
                 key={route.href}
                 href={route.href}
                 className={cn(
